@@ -1,5 +1,5 @@
 # Autentication
-O programa desenvolvido teve por objetivo criar uma lógica para que as senhas criadas pelos usuários não sejam salvas no banco de dados de uma maneira que, caso ocorram violações de segurança, as senhas não estejam desprotegidas.
+A API desenvolvida teve por objetivo criar uma lógica para que as senhas criadas pelos usuários não sejam salvas no banco de dados de uma maneira que, caso ocorram violações de segurança, as senhas não estejam desprotegidas.
 
 Dessa forma, utilizei do Spring Security, mais precisamente da interface 'PasswordEncoder' e  do método 'encoder'. Partindo da inserção dos atributos obrigatórios da classe 'User', e utilizando do Postman para as simulações, configurei o método para 'PostMapping' com o caminho '/insert'. Ao ser passada uma senha o método 'setPassword' é convocado e dentro dele é passado o 'encode' que realiza a codificação da senha. Quando o usuário é inserido no banco de dados a senha é salva na coluna 'password' estando criptografada e ao ser realizada a chamada deste usuário a visualização de sua senha original não é possível. 
 
